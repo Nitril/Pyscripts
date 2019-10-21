@@ -7,6 +7,15 @@ def tocelcius(temp_fahr):
         temp_celc.append((temp_fahr[index] - 32) * 5 / 9)
     return temp_celc
 
+def tocelcius(temp_fahr):
+    temp_celc = (temp_fahr - 32) * 5 / 9
+    return temp_celc
+
+
+input = [1 ,2 ,-40 ,-50 ,0 ,10]
+
+print(list(map(tocelcius, input)))
+
 def tofahrenheit(temp_celc):
     temp_fahr = []
     for index in range(len(temp_celc)):
@@ -40,3 +49,9 @@ while attempts < 3:
         print("You've entered wrong value. Try again!")
     finally:
         print("bye")
+
+
+
+lam = lambda  x: (x - 32) * 5 / 9
+
+print(lam(-40))
